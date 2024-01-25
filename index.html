@@ -10,28 +10,50 @@
     <title>Title</title>
 </head>
 <body>
-  <!--main container-->
-  <div class="container">
-    <form>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Search Term</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+<header class="header">
+    <div class="jumbotron jumbotron-fluid bg-primary">
+        <div class="container">
+          <h1 class="display-4">New York Time Search</h1>
         </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
+      </div>
+</header>
+
+<section>
+    <div class="card-header"><p>Search parameters</p></div>
+    <form>
+        <div class="card-body">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Search Term</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Number of records to retrieve:</label>
           <input type="password" class="form-control" id="exampleInputPassword1">
         </div>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Start year (optional):</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">End year (optional):</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Search</button>
+          <button type="submit" class="btn btn-primary">Clear</button>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
-      <div class="form-group form-check">
-    
+
+  </section>    
+
+      <div class="topArticles card-header">
+<p>Top articles</p>
+
       </div>
+
     <footer>
         <p> Made with lots and lots of ❤️</p>
     </footer>
