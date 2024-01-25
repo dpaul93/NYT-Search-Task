@@ -1,4 +1,17 @@
-/* .header {
+header {
+    color: white;
+}
 
-    display: flex;
-} */
+.customJUMBO{
+    background-color: #223769;
+    border-radius: 10px;
+}
+
+.customHeader{
+    color: rgb(17, 17, 17);
+    font-weight: 700;
+}
+
+section{
+    border-radius: 10px;
+}
