@@ -26,6 +26,17 @@ $("#clear").on("click", function (event) {
 
 
 function displayNews() {
+
+    if (startYear !== "")
+    {
+        searchText=searchText + "&begin_date=" + startYear;      
+    }
+    
+    if (endYear !== "")
+    {
+        searchText=searchText + "&end_date=" + endYear;      
+    }    
+    
     var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + searchText + "&api-key=" + apiKey;
 
     fetch(queryURL)
@@ -38,8 +49,18 @@ function displayNews() {
 
             for (var i = 0; i < data.response.docs.length; i++) {
 
+                // if max no articles displayed, then exit loop        
+                if (searchOption !== "")
+                {
+                    if (i == searchOption)
+                    {
+                        break;
+                    }
+                }
+                
                 $("#articles").append('<a href="' + data.response.docs[i].web_url + '">' + data.response.docs[i].headline.main + '</a>');
                 $("#articles").append('<br>');
+
             }
         });
 
