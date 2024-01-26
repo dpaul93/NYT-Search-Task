@@ -13,7 +13,9 @@ $("#search").on("click", function (event) {
     searchText = $("#search-text").val();
     searchOption = $("#select-option").val();
     startYear = $("#start-year").val();
+    startYear = startYear.replace(/-/g, '')
     endYear = $("#end-year").val();
+    endYear = endYear.replace(/-/g, '')
 
     displayNews();
 })
